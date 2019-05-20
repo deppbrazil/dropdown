@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #000000;
+        }
+
+        .dropdown {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        #drop-content a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 40px;
+            margin-top: 5px;
+        }
+        </style>
+    </head>
+
+<body>
+  <div class="container"> 
+    <div class="dropdown">
+        <button onclick="show_hide()" class="button">Dropdown</button>
+        <div style="display:none;" id="drop-content">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+            <a href="#">Item 4</a>
+            <a href="#">Item 5</a>
+        </div>
+    </div>
+  
+  </div>
+
+<script>
+  function show_hide() {
+    var click = document.getElementById('drop-content');
+    if (click.style.display === "none") {
+      click.style.display = "block";
+    } else {
+      click.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>
